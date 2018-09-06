@@ -4,7 +4,7 @@
 
 AWS_IMAGE="${OS:-ami-7c491f05}"
 
-aws s3 mb s3://tealorganisation.tk-state --region eu-west-1
+#aws s3 mb s3://tealorganisation.tk-state --region eu-west-1
 
 export KOPS_STATE_STORE="s3://tealorganisation.tk-state"
 #export KOPS_FEATURE_FLAGS=AlphaAllowGCE
