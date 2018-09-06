@@ -14,7 +14,6 @@ pipeline {
           stage('Install Kubernestes Cluster') {
             steps {
               ansiColor('xterm') {
-               withEnv(['PATH+EXTRA=/usr/sbin:/usr/bin:/sbin:/bin']) {
                 sh  """
                     sudo bash ./cluster_1.sh
                     """
@@ -22,5 +21,4 @@ pipeline {
               }
             }
           }
-}
 }
