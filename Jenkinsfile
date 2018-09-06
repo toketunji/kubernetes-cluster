@@ -16,7 +16,7 @@ pipeline {
               ansiColor('xterm') {
                withEnv(['PATH+EXTRA=/usr/sbin:/usr/bin:/sbin:/bin']) {
                 sh  """
-                    sudo ./cluster_1.sh
+                    sudo cluster_1.sh
                     """
               }
               }
