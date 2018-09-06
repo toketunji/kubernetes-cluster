@@ -21,6 +21,7 @@ kops create cluster \
   --node-count 2 \
   --node-size t2.micro \
   --master-count 1 \
+  --region eu-west-1 \
   --master-size t2.medium \
   --master-zones eu-west-1a \
   --dns-zone tealorganisation.tk \
