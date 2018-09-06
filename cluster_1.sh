@@ -25,14 +25,14 @@ kops create cluster \
   --master-size t2.medium \
   --master-zones eu-west-1a \
   --dns-zone tealorganisation.tk \
-  --networking calico \
+  --networking weave \
   --cloud-labels "Team=Dev,Owner=Admin" \
   --topology private \
   --kubernetes-version 1.10.7 \
   --state s3://tealorganisation.tk-state \
   --image $AWS_IMAGE \
 
-kops update cluster staging.tealorganisation.tk --yes
+#kops update cluster staging.tealorganisation.tk --yes
 
 sleep 5m
 
