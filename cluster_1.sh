@@ -3,6 +3,7 @@
   # A bastion instance will be setup to provide instance access.
 
 AWS_IMAGE="${OS:-ami-7c491f05}"
+AWS_REGION="eu-west-1"
 
 #aws s3 mb s3://tealorganisation.tk-state --region eu-west-1
 
@@ -10,9 +11,9 @@ export KOPS_STATE_STORE="s3://tealorganisation.tk-state"
 #export KOPS_FEATURE_FLAGS=AlphaAllowGCE
 
   
-  VPC=$(aws ec2 describe-vpcs --filters Name=tag:Name,Values=tealorganisation.tk-staging-vpc --query 'Vpcs[].VpcId' | grep vpc | sed 's/"//g' | awk '{print $1}')
-  PRIVATE_SUBNET=$(aws ec2 describe-subnets --filters "Name=tag:Name,Values=tealorganisation.tk-staging-sn-private-a" | grep SubnetId | awk '{print $2}' | sed 's/"//g' | awk -F, '{print $1}')
-  PUBLIC_SUBNET=$(aws ec2 describe-subnets --filters "Name=tag:Name,Values=tealorganisation.tk-staging-sn-public-a" | grep SubnetId | awk '{print $2}' | sed 's/"//g' | awk -F, '{print $1}')
+ # VPC=$(aws ec2 describe-vpcs --filters Name=tag:Name,Values=tealorganisation.tk-staging-vpc --query 'Vpcs[].VpcId' | grep vpc | sed 's/"//g' | awk '{print $1}')
+  #PRIVATE_SUBNET=$(aws ec2 describe-subnets --filters "Name=tag:Name,Values=tealorganisation.tk-staging-sn-private-a" | grep SubnetId | awk '{print $2}' | sed 's/"//g' | awk -F, '{print $1}')
+  #PUBLIC_SUBNET=$(aws ec2 describe-subnets --filters "Name=tag:Name,Values=tealorganisation.tk-staging-sn-public-a" | grep SubnetId | awk '{print $2}' | sed 's/"//g' | awk -F, '{print $1}')
 
 kops create cluster \
   --name staging.tealorganisation.tk \
