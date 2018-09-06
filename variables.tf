@@ -1,13 +1,13 @@
 variable "name" {
-  default = "example.com"
+  default = "tealorganisation.tk"
 }
 
 variable "region" {
-  default = "us-east-1"
+  default = "eu-west-1"
 }
 
 variable "azs" {
-  default = ["us-east-1a", "us-east-1c", "us-east-1d"]
+  default = ["eu-west-1a"]
   type    = "list"
 }
 
