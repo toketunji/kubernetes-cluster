@@ -32,7 +32,7 @@ kops create cluster \
   --state s3://tealorganisation.tk-state \
   --image $AWS_IMAGE \
 
-#kops update cluster staging.tealorganisation.tk --yes
+kops update cluster staging.tealorganisation.tk --yes
 
 sleep 5m
 
