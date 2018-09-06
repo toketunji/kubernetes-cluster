@@ -15,9 +15,7 @@ pipeline {
             steps {
               withEnv(['PATH+EXTRA=/usr/sbin:/usr/bin:/sbin:/bin']) {
               ansiColor('xterm') {
-                sh  """
-                    bash ./cluster_1.sh
-                    """
+                sh  """ bash ./cluster_1.sh"""
               }
               }
             }
